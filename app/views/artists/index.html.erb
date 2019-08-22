@@ -1,0 +1,16 @@
+<h1>Artists</h1>
+<div>
+  <ul>
+    <% @artists.each do |artist| %>
+      <li>
+        <div>
+          <img src="https://robohash.org/<%= artist.avatar %>" />
+          <p class="header">
+            <%= link_to artist.name, artist_path(artist) %>
+          </p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<%= link_to "New Artist", new_artist_path %>

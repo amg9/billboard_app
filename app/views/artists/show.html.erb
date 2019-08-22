@@ -1,0 +1,8 @@
+<h1><%= @artist.name %></h1>
+<img src="https://robohash.org/<%= @artist.avatar %>" />
+<br />
+<%= link_to 'Edit', edit_artist_path(@artist) %>
+<br />
+<%= link_to "Delete Artist", artist_path(@artist), method: :delete %>
+<br />
+<%= link_to "Back", artists_path %>

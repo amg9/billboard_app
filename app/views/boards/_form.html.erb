@@ -1,0 +1,9 @@
+<h1><%= @board.id ? "Edit Board" : "New Board" %></h1>
+<hr />
+<div>
+  <%= form_for @board do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true %>
+    <%= f.submit %>
+  <% end %>
+</div>

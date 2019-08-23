@@ -1,0 +1,11 @@
+<h1><%= @tune.title %></h1>
+<p>Artist: <%= @artist.name %></p>
+<p>Album: <%= @tune.album %></p>
+<p>Release Date: <%= @tune.release_date %></p>
+<p>Lyrics: <%= @tune.lyrics %></p>
+<br />
+<%= link_to "Edit", edit_artist_tune_path(@artist, @tune) %>
+<br />
+<%= link_to "Delete Song", artist_tune_path(@artist, @tune), method: :delete %>
+<br />
+<%= link_to "Back", artist_tunes_path(@artist) %>

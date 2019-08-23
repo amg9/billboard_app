@@ -1,0 +1,6 @@
+<h1>Add a song to <%= @artist.name %>'s Discography</h1>
+
+<%= render "form", artist: @artist, tune: @tune %>
+
+<br />
+<%= link_to "Back", artist_path(@artist) %>

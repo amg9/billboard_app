@@ -1,6 +1,6 @@
 <h1><%= @artist.name %></h1>
 <img src="https://robohash.org/<%= @artist.avatar %>" />
-<%= link_to "View Songs", artist_songs_path(@artist) %>
+<%= link_to "View Songs", artist_tunes_path(@artist) %>
 <br />
 <%= link_to 'Edit', edit_artist_path(@artist) %>
 <br />

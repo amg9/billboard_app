@@ -1,0 +1,19 @@
+<%= form_for [@artist, @tune] do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :album %>
+    <%= f.text_field :album %>
+  </div>
+  <div>
+    <%= f.label :release_date %>
+    <%= f.text_field :release_date %>
+  </div>
+  <div>
+    <%= f.label :lyrics %>
+    <%= f.text_area :lyrics %>
+  </div>
+  <%= f.submit %>
+<% end %>

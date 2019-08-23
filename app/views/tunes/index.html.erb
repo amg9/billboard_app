@@ -1,0 +1,11 @@
+<h1>Songs by <%= @artist.name %></h1>
+<% @tunes.each do |tune| %>
+  <div>
+    <h3><%= link_to tune.title, artist_tune_path(@artist, tune) %></h3>
+  </div>
+  <br />
+<% end %>
+
+<%= link_to "New Song", new_artist_tune_path(@artist) %>
+<br />
+<%= link_to "Back", artist_path(@artist) %>

@@ -1,16 +1,13 @@
 <h1>Artists</h1>
-<div>
-  <ul>
-    <% @artists.each do |artist| %>
-      <li>
-        <div>
-          <img src="https://robohash.org/<%= artist.avatar %>" />
-          <p class="header">
-            <%= link_to artist.name, artist_path(artist) %>
-          </p>
-        </div>
-      </li>
-    <% end %>
-  </ul>
+<div class="ui four column divided grid">
+  <% @artists.each do |artist| %>
+    <div class="column">
+      <img src="https://robohash.org/<%= artist.avatar %>" />
+      <p class="header">
+        <%= link_to artist.name, artist_path(artist) %>
+      </p>
+    </div>
+  <% end %>
 </div>
+<br />
 <%= link_to "New Artist", new_artist_path %>
